@@ -44,7 +44,15 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#abstract_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_archival_representation_of"/>
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#antigraph_of -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#antigraph_of">
+        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#copy_of"/>
     </owl:ObjectProperty>
     
 
@@ -53,7 +61,25 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#authenticated_copy_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#copy_of"/>
+        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Proof_in_court"/>
         <owl:propertyDisjointWith rdf:resource="http://digital-diplomatics.org/owl/versioning/#informal_copy_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#based_on -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#based_on">
+        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Representation"/>
+        <rdfs:comment xml:lang="en">Scholarly (and archival) representations can be based on a number of charter artefacts</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#chirograph_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#chirograph_part_of">
+        <rdfs:comment xml:lang="en">The artefact is a part of charter cut in two (indenture).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -61,7 +87,6 @@
     <!-- http://digital-diplomatics.org/owl/versioning/#copy_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#copy_of">
-        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_copied_in"/>
         <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_artefact"/>
         <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_artefact"/>
     </owl:ObjectProperty>
@@ -72,7 +97,7 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#description_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_archival_representation_of"/>
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
         <rdfs:comment xml:lang="en">Describes material and other features of the charter.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -81,7 +106,7 @@
     <!-- http://digital-diplomatics.org/owl/versioning/#digital_representation_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#digital_representation_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_represenation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#represenation_of"/>
     </owl:ObjectProperty>
     
 
@@ -96,10 +121,26 @@
     
 
 
+    <!-- http://digital-diplomatics.org/owl/versioning/#duplicate_of -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#duplicate_of">
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#engrosses"/>
+        <rdfs:comment xml:lang="en">The artefact is second engrossement of the original issued by the same authority but after the production of the original.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#embodied_in -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#embodied_in">
+        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#embodies"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://digital-diplomatics.org/owl/versioning/#embodies -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#embodies">
-        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_embodied_in"/>
         <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_artefact"/>
         <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_text"/>
         <rdfs:comment xml:lang="en">An artifact embodies the text of a charter.</rdfs:comment>
@@ -111,6 +152,7 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#embodies_as_original">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#embodies"/>
+        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Original"/>
         <rdfs:comment xml:lang="en">The artefact which creates the legal fact of a charter by its production.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -138,7 +180,7 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#image_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_archival_representation_of"/>
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
     </owl:ObjectProperty>
     
 
@@ -151,11 +193,11 @@
     
 
 
-    <!-- http://digital-diplomatics.org/owl/versioning/#insertum_of -->
+    <!-- http://digital-diplomatics.org/owl/versioning/#inserts -->
 
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#insertum_of">
-        <owl:equivalentProperty rdf:resource="http://digital-diplomatics.org/owl/versioning/#inspeximus_of"/>
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#authenticated_copy_of"/>
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#inserts">
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#copy_of"/>
+        <rdfs:comment xml:lang="en">Copies the text of the antigraph by inserting it into a new charter.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -164,6 +206,8 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#inspeximus_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#authenticated_copy_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#inserts"/>
+        <rdfs:comment xml:lang="en">A charter which states that the copied text of another charters is equal to the antigraph.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -171,96 +215,24 @@
     <!-- http://digital-diplomatics.org/owl/versioning/#is_archival_representation_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_archival_representation_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_represenation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#represenation_of"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_based_on -->
+    <!-- http://digital-diplomatics.org/owl/versioning/#multiple_original_of -->
 
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_based_on">
-        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Representation"/>
-        <rdfs:comment xml:lang="en">Scholarly (and archival) representations can be based on a number of charter artefacts</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_chirograph_part_of -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_chirograph_part_of">
-        <rdfs:comment xml:lang="en">The artefact is a part of charter cut in two (indenture).</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_copied_in -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_copied_in"/>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_duplicate_of -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_duplicate_of">
-        <rdfs:comment xml:lang="en">The artefact is second engrossement of the original issued by the same authority but after the production of the original.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_embodied_in -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_embodied_in"/>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_multiple_original_of -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_multiple_original_of">
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#multiple_original_of">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:comment xml:lang="en">both artefacts have the same status as original/engrossement</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_notarial_minute_of -->
+    <!-- http://digital-diplomatics.org/owl/versioning/#notarial_minute_of -->
 
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_notarial_minute_of">
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#notarial_minute_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#drafts"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_realised_in -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_realised_in">
-        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#realises"/>
-        <rdfs:comment xml:lang="en">A legal fact is realised in a text.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_represenation_of -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_represenation_of">
-        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Representation"/>
-        <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter"/>
-        <rdfs:comment xml:lang="en">represents the abstract concept of a charter as the individual network of realisations and embodiments.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_retroacta_to -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_retroacta_to">
-        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#uses_as_retroacta"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of -->
-
-    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_represenation_of"/>
     </owl:ObjectProperty>
     
 
@@ -281,6 +253,15 @@
     
 
 
+    <!-- http://digital-diplomatics.org/owl/versioning/#realised_in -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#realised_in">
+        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#realises"/>
+        <rdfs:comment xml:lang="en">A legal fact is realised in a text.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://digital-diplomatics.org/owl/versioning/#realises -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#realises">
@@ -291,10 +272,36 @@
     
 
 
+    <!-- http://digital-diplomatics.org/owl/versioning/#represenation_of -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#represenation_of">
+        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Representation"/>
+        <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter"/>
+        <rdfs:comment xml:lang="en">represents the abstract concept of a charter as the individual network of realisations and embodiments.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#retroacta_to -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#retroacta_to">
+        <owl:inverseOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#uses_as_retroacta"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://digital-diplomatics.org/owl/versioning/#scholarly_edition_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#scholarly_edition_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of -->
+
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of">
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#represenation_of"/>
     </owl:ObjectProperty>
     
 
@@ -302,7 +309,7 @@
     <!-- http://digital-diplomatics.org/owl/versioning/#transcription_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#transcription_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
     </owl:ObjectProperty>
     
 
@@ -310,7 +317,7 @@
     <!-- http://digital-diplomatics.org/owl/versioning/#translation_of -->
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#translation_of">
-        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#is_scholarly_representation_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#scholarly_representation_of"/>
     </owl:ObjectProperty>
     
 
@@ -319,6 +326,7 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#transumptum_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#authenticated_copy_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#inserts"/>
         <rdfs:comment xml:lang="en">A charter which repeats the legal act of another one. where the author of the repetition takes full responsibility for the actions/promises of the authore of the exemplar.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -385,13 +393,21 @@
 
     <!-- http://digital-diplomatics.org/owl/versioning/#Original -->
 
-    <owl:Class rdf:about="http://digital-diplomatics.org/owl/versioning/#Original"/>
+    <owl:Class rdf:about="http://digital-diplomatics.org/owl/versioning/#Original">
+        <rdfs:subClassOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#Proof_in_court"/>
+    </owl:Class>
     
 
 
     <!-- http://digital-diplomatics.org/owl/versioning/#Physical_object -->
 
     <owl:Class rdf:about="http://digital-diplomatics.org/owl/versioning/#Physical_object"/>
+    
+
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#Proof_in_court -->
+
+    <owl:Class rdf:about="http://digital-diplomatics.org/owl/versioning/#Proof_in_court"/>
     
 
 
