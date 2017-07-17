@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xml:base="http://digital-diplomatics.org/owl/versioning/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <!-- Equivalents outside of diplomatics -->
+    <rdf:Description rdf:ID="digital_representation">
+        <owl:equivalentProperty rdf:resource="http://www.europeana.eu/schemas/edm/hasView"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="realises">
+        <owl:equvivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R3i"/>
+    </rdf:Description>
+    <rdf:Description rdf:ID="embodies">
+        <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R42"/>
+    </rdf:Description>
+    <!-- Equivalents to the VID -->
+    
+</rdf:RDF>
