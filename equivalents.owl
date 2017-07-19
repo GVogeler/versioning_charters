@@ -14,6 +14,150 @@
     <rdf:Description rdf:ID="embodies">
         <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R42"/>
     </rdf:Description>
-    <!-- Equivalents to the VID -->
     
+    <!-- Equivalents to the VID -->
+    <rdf:Description rdf:ID="embodied_in">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_24"/>
+    </rdf:Description>
+
+    <!--     VID_42 : original  -->
+    <rdf:Description rdf:about="http://digital-diplomatics.org/owl/versioning/#embodies_as_original">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_42"/>
+    </rdf:Description>
+    
+    <!-- 
+        VID_47 : réexpedition / Zweitausfertigung
+        VID_48 : renovatio
+    -->
+    <rdf:Description rdf:about="http://digital-diplomatics.org/owl/versioning/#duplicate_of">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_47"/>
+        <rdfs:seeAlso rdf:resource="http://www.cei.lmu.de/VID/#BID_48"/>
+    </rdf:Description>
+    
+    <!--
+        VID_49 : appennis (Neuausfertigung bei Verlust des Originals)
+        VID_121 : Un acte récrit ou acte refait 
+    -->
+    <rdf:Description rdf:about="http://digital-diplomatics.org/owl/versioning/#appennis">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_49"/>
+        <rdfs:seeAlso rdf:resource="http://www.cei.lmu.de/VID/#VID_121"/>
+    </rdf:Description>
+
+    <!-- 
+        VID_45 : duplicata
+        VID_43 : original mulitple
+    -->
+    <rdf:Description rdf:about="http://digital-diplomatics.org/owl/versioning/#additional_original_of">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_43"/>
+        <rdfs:seeAlso rdf:resource="http://www.cei.lmu.de/VID/#VID_45"/>
+    </rdf:Description>
+    <!-- 
+        VID_44 : chirographe
+    -->
+    <rdf:Description rdf:about="http://digital-diplomatics.org/owl/versioning/#chirograph_part_of">
+        <rdfs:isDefinedBy rdf:resource="http://www.cei.lmu.de/VID/#VID_44"/>
+    </rdf:Description>
+
+    <!-- 
+
+VID_46 : expedition / Ausfertigung
+
+VID_50 : pancarta mit seinen verschiedenen Bedeutungen
+
+VID_51 . confirmatio
+
+VID_52 : transcrire (jede Art von Abschreiben)
+
+VID_53 : copie, VID_54 : authentique, VID_55 : informe ; VID_56 : Nachzeichnung
+
+No. 57: Une copie de chancellerie 
+est la copie d'un *original, établie par la *chancellerie même qui a procédé � l'expédition de cet original. (p. 33) edit
+ - de.: Kanzleikopie - es.: copia de cancillería - fr.: copie de chancellerie - it.: copia di cancellería 
+No. 58: Une copie enregistrée 
+(lat: copia registrata, litterae registratae, registrum) est une transcription faite par un service qui a autorité pour enregistrer les actes et leur donner ainsi un caractère d'authenticité. (p. 33) edit
+ - de.: Registereintragung - en.: enrolment, registration - es.: copia registral - fr.: copie enregistrée - it.: copia nel registro - la.: copia registrata, litterae registratae, registrum 
+No. 59: Une copie notariée 
+est une copie qui comporte un certificat d'authenticité de la main d'un ou de plusieurs notaires. (p. 33) edit
+ - de.: notarielle Kopie, notarielle Abschrift - en.: notarial copy, transumpt - es.: copia notaríal - fr.: copie notariée - it.: copia notarile 
+No. 60: Une copie judiciaire 
+est une copie dressée sur l'ordre d'un juge et (ou) pourvue d'un certificat d'authenticité de celui-ci. (p. 33) edit
+ - de.: gerichtlich beglaubigte Abschrift - es.: copia de curia - fr.: copie judiciaire - it.: copia giudiziaria 
+No. 61: Une copie sous le sceau 
+est une copie dont l'authenticité est attestée par l'apposition du sceau d'une autorité. En Angleterre, cette pratique est dite exemplification. (p. 33) edit
+ - de.: gesiegelte Abschrift - en.: exemplification - fr.: copie sous le sceau 
+No. 62: Une copie conforme ou certifiée 
+est une copie dont une autorité publique certifie la conformité matérielle du texte avec celui du document qui a servi � la transcription. (p. 33) edit
+ - de.: beglaubigte Abschrift - es.: copia certificada - fr.: copie conforme, copie certifiée - it.: copia conforme 
+No. 63: Une copie collationnée 
+est la transcription d'un document que le copiste atteste avoir dûment conférée mot � mot (lat.: collatio) au modèle qu'il reproduit sans pour autant avoir autorité pour délivrer un certificat d'authenticité. (p. 33) edit
+ - de.: Abschrift, kollationierte Abschrift - fr.: copie collationnée - it.: copia collazionata - la.: collatio 
+No. 64: Une copie libre 
+est, dans les pay qui connaissent ou ont connu une administration fiscale du Timbre, une copie établie sur un papier ou un parchemin "libre", c'est-� -dire non timbré (p. 34) edit
+ - es.: copie simple - fr.: copie libre - it.: copia in carta libera 
+•  Elle s'oppose � une copie sur papier timbré. (p. 34) edit
+ - fr.: copie sur papier timbré - it.: copia in carta bollata 
+No. 65: l'insertion 
+(lat.: insertio) est une pratique qui consiste � *transcrire un document antériuer dans le corps d'un autre acte (lat.: inserire). (p. 34) edit
+ - de.: Inserierung - en.: inspection (Escosse moderne) - es.: inserción - fr.: insertion - it.: inserzione - la.: insertio, inserire 
+l'Insertion:
+a. Soit pour donner un appui juridique � cet acte (c'et la *copie� insérée) (p. 34) edit
+ - de.: Inserierung - en.: inspection (Escosse moderne) - es.: inserción - fr.: insertion - it.: inserzione - la.: insertio, inserire 
+l'Insertion:
+b. Soit pour conférer l'authenticité � la pièce transcrite (c'est le *vidimus ou en Angleterre l'*inspeximus) (p. 34) edit
+ - de.: Inserierung - en.: inspeximus, inspection (Escosse moderne) - es.: inserción - fr.: Insertion, vidimus, insertion - it.: inserzione - la.: inserire, insertio 
+•  En Europe centrale (Bohême), l'*insertio -qui s'applicque � l'insertion d'une clause extratite d'un document- s'oppose � la transcriptio ou transumptio qui contient le texte complet: cf. n° 52 b (p. 34) edit
+No. 66: La copie insérée 
+(lat.: insertum), au sens technique du terme, est la transcription d'une acte antérieur, visant � éclairer, � compléter, � donner pleine valeur juridique � l'acte dans lequel il se trouve transcrit.
+Ainsi peuvent être insérés les pouvoirs de procureurs ou mandataieres intervenant � la demande de l'une ou de l'autre des parties, les commissions délivrées � des commissaires, des certificats de toute nature portant sur l'habileté juridique des contractants ou attestant leurs droits sur la choase, ou encore des titres antérieurs etc. (p. 34) edit
+ - de.: Insert, Transsumpt - es.: inserto, inserto - fr.: copie insérée - it.: inserto - la.: insertum 
+•  En Hongrie, toute copie insérée dans un autre acte est dite indifféremement: (lat.) transsriptum ou transsumptum. (p. 34) edit
+ - la.: transsriptum, transsuptio 
+No. 67: Un vidimus ou un inspeximus 
+est un acte par lequel une autorité atteste sous son sceau avoir vu un acte antérieur ayant tous les caractères de l'authenticité, en décrit éventuellement les caractéres externes (et notamment le sceau et ses attaches) et en reproduit intégralement le texte sans en rien modifier afin de donner authenticité au document ainsi transcrit.
+Un vidimus ne constitue évidemment pas nécessairement, aux yeux du diplomatiste, une présomption de sincérité pour l'acte vidimé. (p. 34) edit
+ - de.: Vidimus - en.: inspeximus - es.: vidimus - fr.: vidimus, inspeximus - it.: vidimus 
+•  a. l'autorité qui établit le vidimus et dite le vidimant (p. 34) edit
+ - fr.: vidimant 
+•  b. L'acte inséré dans le vidimus est dit acte vidimé (p. 34) edit
+ - en.: inspeximé - fr.: acte vidimé 
+•  En Angleterre, l'établissement d'un inspeximus dans le seul but de donner une copie authentique sans inention de le confrimer est dit exemplificatio (p. 34) edit
+ - en.: exemplificatio 
+No. 68: Un vidimus de vidimus (ou d'inspeximus) 
+est un *vidimus dans lequel l'acte vidimé est lui-même un vidimus.
+Au Bas Moyen Age, un grand nombre de copies (spécialement en France et en Angleterre) présentent la forme de tels vidimus successifs emboîtant le contenu de l'acte primitif dans des séquelles de successifs vidimus. (p. 35) edit
+ - de.: Vidimientis vidimus - fr.: vidimus d'inspeximus, vidimus de vidimus - it.: vidimus di vidimus 
+No. 69: Un vidimus ou inspeximus confirmatif
+est un *vidimus ou un inspeximus par lequel le *vidimant, ne se contentant pas de reproduire l'acte vidimé, en confirme le con tenu en le reprenant � son propre compte et en le faisant suivre d'une clause de ratifica tion ou clause de rato.
+Les vidimus de la chancellerie royale française et les inspeximus del� chancellerie royale anglaise se présentent le plus souvent sous cette forme de vidimus confirmatifs. (p. 35) edit
+ - de.: Transsumpt - en.: confirmation in inspeximus form, confirmatio in maiori forma (Ecosse) - es.: confirmación - fr.: vidimus, inspeximus confirmatif - it.: vidimus confirmativo 
+No. 70: (annexer)
+Au lieu de pratiquer l'*insertion de pièces dans un autre document comme justification de celui-ci, on peut les y annexer, les pièces annexées sont, soit copiées � la suite du document, soit (comme c'est le cas de documents en rouleau) cousues à son extrémité, soit encore placées sous une même chemise. (p. 35) edit
+ - de.: beigefügte Stücke, Anlagen, angehängte Stücke - es.: anejos - fr.: annexer - it.: allegati 
+No. 71: Un transfixe 
+(lat.: transfixum)
+est un groupe de documents formé par la superposition de deux (ou plusieurs) acts dont l'un est la justification de l'autre, et qui sonst scllés d'un même sceau dont les attaches sont passées � travers les deux pièces.
+Un tel fait ne se constate pas dans certains pays (Espagne, Italie) (p. 35) edit
+ - de.: transfixum - fr.: transfixe - la.: transfixum
+No. 87: Un extrait 
+est une copie textuelle de certains éléments d'un document. S'il porte une marque d'authenticité, on le dit authentique (cf. n° 364). (p. 38) edit
+ - de.: beglaubigter Urkundenauszug, beglaubigter Urkundenauszug, Teilabschrift - en.: estreat - es.: extracto (autorizado) - fr.: extrait - it.: estratto (autenticó) 
+•  En Ecosse, un extract est, au sens juridique, une copie officielle certifiée d'un jugement délivré par une Cour de justice ou bien d'un document quelconque qui constitue un acte écrit public. (p. 38) edit
+ - en.: extract 
+No. 88: Une mention 
+est la simple indication de l'existence d'un document � une date quelconque, relevée dans un *inventaire� d'archives, dans un acte postérieur, dans un texte historiographique, dans les papiers ou l'oeuvre d'un historien. (p. 38) edit
+ - de.: Erwähnung, Urkundenerwähnung - es.: mención, cita - fr.: mention - it.: menzione 
+No. 89: L' enregistrement 
+(lat.: registratio) est une procédure qui consiste � transcrire successivement, intégralement ou par extraits, le texte ou le contenu d'actes, au fur et � mesure que ceux-ci sont expédiés ou reçus. (p. 38) edit
+ - de.: Registrierung - en.: registration, enrolment - es.: registraciónt asiento - fr.: enregistrement - it.: registrazione - la.: registratio
+No. 97: Les actes antérieurs ou retroacta 
+(all.: Vorurkunden) sont des actes dont certains éléments du contenu sont mis textuellement � contribution pour la rédaction d'un nouvel acte. (p. 39) edit
+ - de.: Vorurkunden - es.: modelos - fr.: actes antérieurs, retroacta - it.: documenti preparatori 
+No. 98: Une minute originale 
+est la rédaction définitive d'un acte -comportant éven tuellement toutes les corrections ou modifications de texte- qui constitue la matrice d'où l'on peut tirer des expéditions et qui se conserve dans les archives de son auteur (cf. n° 360). (p. 39) edit
+ - de.: Originalminute - en.: protocol - es.: minuta - fr.: minute originale - it.: minuta 
+No. 99: Une ampliation 
+est une expédition en forme spécialement solennelle d'un acte dont on a établi une autre expédition en forme plus simple.
+A l'époque contemporaine, le mot désigne, au contraire, une expédition, destinée � l'intéressé, d'un acte comportant des mesures le concernant, souvent établie sous la forme d'un extrait d'une *minute originale, laquelle est conservée dans les archives du service d'origine. (p. 40) edit
+ - de.: feierliche Ausfertigung, Prunkausfertigung - es.: ampliación - fr.: ampliation
+-->
 </rdf:RDF>

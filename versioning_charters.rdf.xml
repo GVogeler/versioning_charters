@@ -81,7 +81,13 @@
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#chirograph_part_of">
         <rdfs:comment xml:lang="en">The artefact is a part of charter cut in two (indenture).</rdfs:comment>
     </owl:ObjectProperty>
+
+    <!-- http://digital-diplomatics.org/owl/versioning/#appennis -->
     
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#appennis">
+        <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_legal_fact"/>
+        <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_text"/>
+    </owl:ObjectProperty>
 
 
     <!-- http://digital-diplomatics.org/owl/versioning/#copy_of -->
@@ -90,8 +96,6 @@
         <rdfs:domain rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_artefact"/>
         <rdfs:range rdf:resource="http://digital-diplomatics.org/owl/versioning/#Charter_artefact"/>
     </owl:ObjectProperty>
-    
-
 
     <!-- http://digital-diplomatics.org/owl/versioning/#description_of -->
 
@@ -125,10 +129,14 @@
 
     <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#duplicate_of">
         <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#engrosses"/>
-        <rdfs:comment xml:lang="en">The artefact is second engrossement of the original issued by the same authority but after the production of the original.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The artefact is another engrossement of the original issued by the same authority but after the production of the original.</rdfs:comment>
     </owl:ObjectProperty>
     
 
+    <owl:ObjectProperty rdf:about="http://digital-diplomatics.org/owl/versioning/#additional_original_of">
+        <rdfs:subPropertyOf rdf:resource="http://digital-diplomatics.org/owl/versioning/#engrosses"/>
+        <rdfs:comment xml:lang="en">The artefact is engrossement issued by the same authority simultanously to other engrossements of the same charter.</rdfs:comment>
+    </owl:ObjectProperty>
 
     <!-- http://digital-diplomatics.org/owl/versioning/#embodied_in -->
 
