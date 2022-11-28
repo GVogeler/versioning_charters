@@ -1,7 +1,8 @@
 This is the proposal of an ontology describing concepts which could be covered by the term "charter" in the sense of the scholarly research area of diplomatics. It implements some concepts established by the community in the Vocabulaire Initernationale de la Diplomatique (http://www.cei.lmu.de/VID/) in RDF/OWL.
 It is the result of paper presented at a workshop held Maynooth University on "Versioning Cultural Objects", December 2/3, 2016 (thanks Roman Bleier and Vinayak Das Gupta for organizing it!)
 
-See the publication to this:
+See the [publication](https://kups.ub.uni-koeln.de/10652/):
+
 ```Bibtex
 @incollection{vogeler2019,
           volume = {13},
